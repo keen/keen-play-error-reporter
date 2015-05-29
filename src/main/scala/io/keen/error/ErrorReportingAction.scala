@@ -1,4 +1,4 @@
-package utils
+package io.keen.error
 
 import scala.concurrent.Future
 import scala.util.{Failure,Success,Try}
