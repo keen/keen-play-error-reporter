@@ -1,0 +1,19 @@
+machine:
+  java:
+    version: oraclejdk8
+dependencies:
+  pre:
+    - wget -q https://dl.bintray.com/sbt/debian/sbt-0.13.7.deb
+    - sudo dpkg -i sbt-0.13.7.deb
+  override:
+    - sbt test:compile
+test:
+  override:
+    - sbt test scalastyle
+  post:
+    - sbt package
+general:
+  artifacts:
+    - "target/scala-2.11/*.jar"
+    - "target/specs2-reports"
+    - "target/test-reports"
