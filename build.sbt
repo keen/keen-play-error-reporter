@@ -2,13 +2,11 @@ name := "keen-error-reporter"
 
 organization := "io.keen"
 
-version := "1.0.2"
+version := "1.0.3"
 
 scalaVersion := "2.11.6"
 
 crossScalaVersions := Seq("2.10.4", "2.11.6")
-
-S3Resolver.defaults
 
 s3region := com.amazonaws.services.s3.model.Region.US_West
 
@@ -24,7 +22,7 @@ resolvers ++= Seq[Resolver](
 scalacOptions ++= Seq("-feature", "-Yrangepos")
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play"       %% "play"                           % "2.3.8",
+  "com.typesafe.play"       %% "play"                           % "2.4.3",
   "net.kencochrane.raven"   %  "raven"                          % "6.0.0",
   "org.specs2"              %% "specs2-core"                    % "3.4"     % "test"
 )
