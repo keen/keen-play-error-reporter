@@ -1,13 +1,10 @@
 package io.keen.error
 
-import scala.concurrent.Future
-import scala.util.{Failure,Success,Try}
-
-import play.api.mvc._
-import play.api.mvc.BodyParsers._
 import play.api.mvc.Results._
+import play.api.mvc._
 
-import io.keen.error.Reporter
+import scala.concurrent.Future
+import scala.util.{Failure, Success, Try}
 
 object ErrorReportingAction extends ActionBuilder[Request] {
 
