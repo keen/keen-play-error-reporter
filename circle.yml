@@ -12,8 +12,8 @@ test:
     - sbt test scalastyle
   post:
     - sbt package
-    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    - cp target/test-reports/*.xml $CIRCLE_TEST_REPORTS/junit/
+    #- mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    #- cp target/test-reports/*.xml $CIRCLE_TEST_REPORTS/junit/
 general:
   artifacts:
     - "target/scala-2.11/*.jar"
