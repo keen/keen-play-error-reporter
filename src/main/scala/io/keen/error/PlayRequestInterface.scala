@@ -4,10 +4,6 @@ import net.kencochrane.raven.event.interfaces.SentryInterface
 import play.api.Logger
 import play.api.mvc._
 
-import java.util.Collection
-
-import scala.collection.JavaConversions._
-
 class PlayRequestInterface(request: Request[Any]) extends SentryInterface {
 
   def getHeaders: Headers = request.headers

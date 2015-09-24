@@ -1,17 +1,13 @@
 package io.keen.error
 
 import com.fasterxml.jackson.core.JsonGenerator
-import play.api._
-import play.api.mvc.{AnyContent,Request}
-import play.api.Play.current
-import net.kencochrane.raven.{DefaultRavenFactory,RavenFactory}
 import net.kencochrane.raven.dsn.Dsn
-import net.kencochrane.raven.marshaller.Marshaller
-import net.kencochrane.raven.marshaller.json.{InterfaceBinding,JsonMarshaller}
-import net.kencochrane.raven.event.{Event,EventBuilder}
 import net.kencochrane.raven.event.interfaces.ExceptionInterface
-
-import scala.concurrent.Future
+import net.kencochrane.raven.event.{Event, EventBuilder}
+import net.kencochrane.raven.marshaller.json.InterfaceBinding
+import play.api.Play.current
+import play.api._
+import play.api.mvc.Request
 
 object Reporter {
 
